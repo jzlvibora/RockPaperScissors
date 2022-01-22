@@ -1,0 +1,70 @@
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0">
+        <h2 class="name" id="name--0">You</h2>
+        <div class="weaponBox">
+          <p class="weapon--0">❔</p>
+        </div>
+        
+        <div class="score">
+          <p class="score-label">Score</p>
+          <p id="score--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--0">Computer</h2>
+        <div class="weaponBox">
+          <p class="weapon--1">❔</p>
+        </div>
+        
+        <div class="score">
+          <p class="score-label">Score</p>
+          <p id="score--1">0</p>
+        </div>
+      </section>
+      <button class="btn btn--reset">🔄 Reset</button>
+<div class="weaponSelect">
+            <div class="weapon" id="✊"><i class="fas fa-hand-rock fas fa-10x is-large" ></i></div>
+            
+            <div class="weapon" id="✋"><i class="far fa-paper-plane fas fa-10x  is-large"  ></i></div>
+           
+            <div class="weapon" id="✌️"><i class="fas fa-cut fas fa-10x is-large" ></i></div>
+  </div>
+      
+      <div class="messageBox hidden">
+        <p class="messageContent ">You won!🎯 Paper beats rock. 🎉</p>
+      </div>
+     
+      <div class="roundsBox">
+      <label for="rounds" class ="roundsLabel">🏐 Rounds</label>
+                        <div class="selectRounds">
+                        <select name="rounds" id="rounds">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="7">7</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                    </select>
+                    </div>
+        </div>
+      <div class="gameOver hidden">
+    </div>
+ <div class="overlay hidden "></div>
+    </main>
+       
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/6fcf0d92db.js" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<!-- 
+✌️✋✊ -->

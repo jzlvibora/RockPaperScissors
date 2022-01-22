@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Macondo Swash Caps', cursive;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image: linear-gradient(to top left, #100f63 30%, #8e80a3 80%);
+  
+}
+main{
+  position:relative;
+  width:100rem;
+  height:60rem;
+  display:flex;
+}
+
+.weaponSelect{
+  display:flex;
+  height:12rem;
+  width: 40rem;
+  align-items:center;
+  justify-content:center;
+  position: absolute;
+  top:75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.weapon{
+  color:white;
+  margin:1rem;
+  font-size:.6rem;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding:1.8rem 3rem; 
+  border-radius: 2rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  transition:.3s;
+}
+.weapon:hover{
+  transform:scale(1.1);
+  background-color: #9a75cb;
+}
+.weapon:active{
+  transform:translateY(.5rem);
+  background-color: #610c75;
+}
+.btn {
+  position: absolute;
+  top:7%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.player{
+  text-transform:upperCase;
+  text-align:center;
+  flex:50%;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  font-size:2.4rem;
+  padding:4rem;  
+}
+.player--0{
+  background-image: linear-gradient(to bottom left, #827fad 2%, #d9d3ff 90%);
+  border-radius:2rem 0 0 2rem;
+}
+.player--1{
+  /* background-color:#a4839a; */
+    background-image: linear-gradient(to top left, #827fad 2%,  #a19dd5 90%);
+  border-radius:0 2rem 2rem 0;
+}
+.name{
+  margin-top:5rem;
+  color:#6f2dbd;
+}
+.weaponBox{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:6rem;
+  width:12rem;
+  height:12rem;
+  background-color:white;
+  border-radius:2rem;
+  margin-top:3rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+}
+.score{
+  font-size: 2rem;
+  background-color: #ddbdfc;
+  border-radius: 9px;
+  color: #fff;
+  width: 40%;
+  padding: 2rem;
+  text-align: center;
+  margin-top:3rem;
+}
+.messageBox{
+  position:absolute;
+  left:50%;
+  top:45%;
+  transform:translateX(-50%);
+  font-size:2rem;
+  width:25%;
+  height:14%;
+  text-align:center;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: rgba(255,255,255, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2.5rem;
+  border-radius: 50rem;
+  transtion:0.2s;
+}
+.roundsBox{
+  display:flex;
+  position:absolute;
+  transform: translateX(-50%);
+  top:17%;
+  left:50%;
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.roundsLabel{
+  margin-right: .9rem;
+}
+.hidden{
+  display:none;
+}
+.gameOver{
+  position:relative;
+  font-size:2rem;
+  text-align:center;
+  width:50%;
+  height:65%;
+  position:absolute;
+  left:50%;
+  top:30%;
+  transform: translateX(-50%);
+  border:.1rem solid white;
+  padding:5rem;
+  color:black;
+  border-radius:1rem;
+  z-index:10;
+}
+
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index:5;
+}
+.close-modal{
+  position:absolute;
+  top:1.2rem;
+  right:2rem;
+  font-size:5rem;
+  color:black;
+  cursor:pointer;
+  border:3rem solid black;
+  background:none;
+  
+  
+}
+.winner{
+  background-image: linear-gradient(to top left, #79f0f4 10%,  #4dcf5b 80%);
+}
+.loser{
+   background-image: linear-gradient(to top left, #b49296 2%,  #811f0c 70%);
+}
